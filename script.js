@@ -1,7 +1,7 @@
 const texts = {
     birthday: "Birthday",
     party: "PARTY",
-    toast: "LET'S TOAST TO",
+    toast: "LET'S TOAST TO FABULOUS",
     name: "Ana's",
     age: "50th",
     date: "SATURDAY",
@@ -84,9 +84,6 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const bgImage = new Image();
-bgImage.src = 'Photos/MainBackground.png';
-
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -104,14 +101,34 @@ class Particle {
             y: Math.sin(angle) * speed
         };
         this.alpha = 1;
-        this.decay = 0.008;
+        this.decay = 0.01;
         this.gravity = 0.06;
         this.friction = 0.98;
         this.size = Math.random() * 3 + 2;
+        this.trail = [];
     }
 
     draw() {
         ctx.save();
+        
+        for (let i = 0; i < this.trail.length; i++) {
+            const trailAlpha = this.alpha * (i / this.trail.length) * 0.5;
+            ctx.globalAlpha = trailAlpha;
+            
+            const gradient = ctx.createRadialGradient(
+                this.trail[i].x, this.trail[i].y, 0, 
+                this.trail[i].x, this.trail[i].y, this.size
+            );
+            gradient.addColorStop(0, 'white');
+            gradient.addColorStop(0.2, this.color);
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(this.trail[i].x, this.trail[i].y, this.size * 0.7, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
         ctx.globalAlpha = this.alpha;
         
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2);
@@ -129,6 +146,11 @@ class Particle {
     }
 
     update() {
+        this.trail.push({ x: this.x, y: this.y });
+        if (this.trail.length > 5) {
+            this.trail.shift();
+        }
+        
         this.velocity.x *= this.friction;
         this.velocity.y *= this.friction;
         this.velocity.y += this.gravity;
@@ -219,14 +241,14 @@ let isOnHeroSection = true;
 let canLaunch = true;
 
 const colors = [
-    '#5900ff',
-    '#00ffa6', 
+    '#FFD700',
+    '#FFA500', 
     '#FF4444',
     '#00CED1',
-    '#00c036',
+    '#7FFF00',
     '#FF69B4',
     '#9370DB',
-    '#0016b9'
+    '#FFB6C1'
 ];
 
 function createFirework(x, y) {
@@ -272,16 +294,8 @@ function animate() {
     if (now - lastRefresh > REFRESH_INTERVAL) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         lastRefresh = now;
-    }
-
-    if (bgImage.complete) {
-        ctx.save();
-        ctx.globalAlpha = 0.15;
-        ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
-        ctx.restore();
     } else {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
     for (let i = rockets.length - 1; i >= 0; i--) {
@@ -314,7 +328,7 @@ function startFireworks() {
     
     fireworkInterval = setInterval(() => {
         launchMultipleFireworks();
-    }, 4500);
+    }, 6000);
 }
 
 function stopFireworks() {
