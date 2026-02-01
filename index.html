@@ -576,7 +576,7 @@
 
         .countdown-subtext {
             font-family: 'Bodoni Moda', serif;
-            font-size: clamp(16px, 3.5vw, 24px);
+            font-size: clamp(50px, 3.5vw, 24px);
             color: var(--champagne);
             margin-bottom: 70px;
             font-weight: 300;
@@ -718,11 +718,13 @@
             transform: translateX(50px);
             opacity: 0;
             transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+            align-items: center;
         }
 
         .photo-feature-content.visible .feature-text {
             transform: translateX(0);
             opacity: 1;
+            align-items: center;
         }
 
         .feature-text h3 {
@@ -733,6 +735,7 @@
             font-weight: 400;
             line-height: 1.3;
             text-shadow: 0 0 30px rgba(201, 165, 137, 0.6);
+            align-items: center;
         }
 
         .feature-text p {
@@ -741,6 +744,7 @@
             line-height: 1.9;
             margin-bottom: 25px;
             font-weight: 300;
+            align-items: center;
         }
 
         /* Gallery Grid */
@@ -1224,7 +1228,7 @@
             <div class="birthday-text" id="birthdayText">Birthday</div>
 
             <!-- Language toggle ABOVE PARTY -->
-            <button class="lang-toggle" id="langToggle" type="button">Spanish</button>
+            <button class="lang-toggle" id="langToggle" type="button">Espanol</button>
             
             <!-- "PARTY" in bold -->
             <div class="party-text" id="partyText">
@@ -1258,7 +1262,7 @@
     <section class="countdown-section">
         <div class="countdown-content">
             <h2 class="section-header" id="countdownHeader">The Celebration Begins In</h2>
-            <p class="countdown-subtext" id="countdownSubtext">Mark your calendars for an unforgettable evening</p>
+            <p class="countdown-subtext" id="countdownSubtext">Mark your calendars for an unforgettable evening. Help us count down.</p>
             <div class="countdown-timer">
                 <div class="time-unit">
                     <div class="time-value" id="days">--</div>
@@ -1288,12 +1292,12 @@
     <section class="photo-feature">
         <div class="photo-feature-content">
             <div class="feature-image-wrapper">
-                <img src="PlaceHolder1.png" alt="Patricia" class="feature-image">
+                <img src="Photos/MainPhoto.png" alt="Patricia" class="feature-image">
             </div>
             <div class="feature-text">
                 <h3 id="featureTitle">Fifty Years of Grace</h3>
-                <p id="featureP1">Join us in celebrating a remarkable woman whose warmth, wisdom, and infectious laughter have touched countless lives.</p>
-                <p id="featureP2">Patricia has spent five decades creating beautiful memories, inspiring those around her, and spreading joy wherever she goes.</p>
+                <p id="featureP1">She's turning 50 and she's barely getting started.</p>
+                <p id="featureP2">Join us in celebrating a remarkable woman whose warmth, wisdom, and infectious laughter has touched countless lives.</p>
             </div>
         </div>
         <div class="scroll-hint">
@@ -1302,8 +1306,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
+    <!--<section class="gallery-section">
         <div class="gallery-content">
             <h2 class="gallery-header" id="galleryHeader">Cherished Moments</h2>
             <div class="gallery-grid">
@@ -1332,8 +1335,7 @@
             <div class="scroll-line"></div>
         </div>
     </section>
-
-    <!-- Details Section -->
+    -->
     <section class="details-section">
         <div class="details-content">
             <h2 class="details-header" id="detailsHeader">Event Details</h2>
@@ -1359,8 +1361,8 @@
                 </svg>
                 </div>
                 <div class="detail-label" id="detailTimeLabel">Time</div>
-                <div class="detail-value">7:00 PM</div>
-                <div class="detail-subtext" id="detailTimeSub">Cocktails & Dinner</div>
+                <div class="detail-value">5:00 PM</div>
+                <div class="detail-subtext" id="detailTimeSub">Cocktails & Dinner Starting at 6:30</div>
             </div>
 
             <div class="detail-card">
@@ -1371,7 +1373,7 @@
                 </svg>
                 </div>
                 <div class="detail-label" id="detailVenueLabel">Location</div>
-                <div class="detail-value">The de la Torre Home</div>
+                <div class="detail-value">The de la Torre Residence</div>
                 <div class="detail-subtext" id="detailVenueSub">
                 7315 Gingersnap Dr.<br>Corona, CA 92881
                 </div>
@@ -1418,55 +1420,57 @@
                 scrollNote: "↓ Scroll to RSVP ↓",
                 explore: "Explore",
                 countdownHeader: "The Celebration Begins In",
-                countdownSubtext: "Mark your calendars for an unforgettable evening",
+                countdownSubtext: "COUNT DOWN",
                 days: "Days",
                 hours: "Hours",
                 minutes: "Minutes",
                 seconds: "Seconds",
                 featureTitle: "Fifty Years of Grace",
-                featureP1: "Join us in celebrating a remarkable woman whose warmth, wisdom, and infectious laughter have touched countless lives.",
-                featureP2: "Patricia has spent five decades creating beautiful memories, inspiring those around her, and spreading joy wherever she goes.",
+                featureP1: "She's turning 50 and she's just getting started.",
+                featureP2: "Join us in celebrating a remarkable woman whose warmth, wisdom, and infectious laughter have touched countless lives.",
+                featureP3: "Patricia has spent five decades creating beautiful memories, inspiring those around her, and spreading joy wherever she goes.",
                 galleryHeader: "Cherished Moments",
                 detailsHeader: "Event Details",
                 detailDateLabel: "Date",
-                detailDateSub: "Friday Evening",
+                detailDateSub: "Saturday Evening",
                 detailTimeLabel: "Time",
-                detailTimeSub: "Cocktails & Dinner",
+                detailTimeSub: "Cocktails & Dinner Starting at 6:30pm",
                 detailVenueLabel: "Location",
+                detailVenueSub: "The de la Torre Residence",
                 rsvpHeader: "Join the Celebration",
                 rsvpMessage: "Your presence would make this milestone even more special.<br>Please let us know if you can join us for an elegant evening<br>of dinner, drinks, dancing, and celebration.",
                 rsvpNow: "RSVP Now",
-                rsvpDeadline: "Please respond by March 1st, 2026",
+                rsvpDeadline: "Please respond by Febuary 18th, 2026",
                 contactInfo: "For questions, contact us at (951) 750-3639",
-                langBtn: "Spanish"
+                langBtn: "EspaÑol"
             },
             es: {
                 birthday: "Cumpleaños",
                 party: "FIESTA",
                 tagline1: "¡Estás invitado/a!",
-                tagline2: "Acompáñanos a celebrar",
+                tagline2: "Acompáñarnos a celebrar",
                 scrollNote: "↓ Desliza para confirmar ↓",
                 explore: "Explorar",
                 countdownHeader: "La Celebración Comienza En",
-                countdownSubtext: "¡Marca tu calendario para una noche inolvidable!",
+                countdownSubtext: "¡Contador de dias!",
                 days: "Días",
                 hours: "Horas",
                 minutes: "Minutos",
                 seconds: "Segundos",
-                featureTitle: "Cincuenta Años de Gracia",
-                featureP1: "Acompáñanos a celebrar a una mujer extraordinaria cuya calidez, sabiduría y risa contagiosa que ha tocado muchas vidas.",
-                featureP2: "Patricia ha pasado cinco décadas creando recuerdos hermosos, inspirando a quienes la rodean y compartiendo alegría dondequiera que va.",
+                featureTitle: "Cincuenta Años de Bendiciones",
+                featureP1: "Va cumplir 50 y apenas está comenzando.",
+                featureP2: "Patricia, luz que nunca se apaga, belleza que el tiempo solo embellece. Hoy celebramos tus 50 años de vida, tu fuerza, tu alegria y todo lo que haces brillar.",
                 galleryHeader: "Momentos Inolvidables",
                 detailsHeader: "Detalles del Evento",
                 detailDateLabel: "Fecha",
                 detailDateSub: "Noche de sábado",
                 detailTimeLabel: "Hora",
-                detailTimeSub: "Cócteles y cena",
+                detailTimeSub: "Cócteles y cena a las 6:30pm",
                 detailVenueLabel: "Lugar",
                 rsvpHeader: "Únete a la Celebración",
                 rsvpMessage: "Tu presencia haría este momento aún más especial.<br>Por favor, avísanos si puedes acompañarnos a una velada elegante<br>de cena, bebidas, baile y celebración.",
                 rsvpNow: "Confirmar Asistencia",
-                rsvpDeadline: "Por favor responde antes del 1 de marzo de 2026",
+                rsvpDeadline: "Por favor responde antes del 18 de febrero de 2026",
                 contactInfo: "Si tienes preguntas, contáctanos al (951) 750-3639",
                 langBtn: "English"
             }
