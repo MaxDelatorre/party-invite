@@ -39,7 +39,6 @@
             line-height: 1.6;
         }
 
-        /* Magical floating orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -92,7 +91,6 @@
             }
         }
 
-        /* Sparkle particles - LAYERED ON TOP */
         .sparkle-container {
             position: fixed;
             top: 0;
@@ -124,7 +122,6 @@
             }
         }
 
-        /* Hero Section - Champagne glasses background */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -175,7 +172,6 @@
             }
         }
 
-        /* Handwritten "Birthday" text */
         .birthday-text {
             font-family: 'Alex Brush', cursive;
             font-size: clamp(40px, 10vw, 75px);
@@ -224,7 +220,6 @@
             }
         }
 
-        /* NEW: Language toggle button (above PARTY) */
         .lang-toggle {
             display: block;
             align-items: center;
@@ -255,7 +250,6 @@
             transform: translateY(0) scale(1.01);
         }
 
-        /* "PARTY" text with marquee lights effect */
         .party-text {
             font-family: 'Cinzel', serif;
             font-size: clamp(32px, 8vw, 60px);
@@ -301,7 +295,6 @@
             opacity: 0.4;
         }
 
-        /* "From Fierce to Fabulous" tagline */
         .tagline {
             font-family: 'Bodoni Moda', serif;
             font-size: clamp(12px, 2.5vw, 18px);
@@ -325,7 +318,6 @@
             }
         }
 
-        /* Name in elegant cursive */
         .name-container {
             margin-bottom: 10px;
             opacity: 0;
@@ -368,7 +360,6 @@
             }
         }
 
-        /* "50th" styling - MADE MUCH BIGGER AND CURSIVE */
         .milestone-wrapper {
             display: inline-block;
             position: relative;
@@ -440,7 +431,6 @@
             margin-left: 3px;
         }
 
-        /* Scroll note - NEW */
         .scroll-note {
             font-family: 'Bodoni Moda', serif;
             font-size: clamp(14px, 3vw, 18px);
@@ -469,7 +459,6 @@
             z-index: 10;
         }
 
-        /* Scroll hints for other sections */
         .countdown-section .scroll-hint,
         .photo-feature .scroll-hint,
         .gallery-section .scroll-hint,
@@ -506,7 +495,6 @@
             box-shadow: 0 0 10px var(--rose-gold);
         }
 
-        /* Countdown Section - String lights background */
         .countdown-section {
             min-height: 100vh;
             display: flex;
@@ -633,7 +621,6 @@
             text-shadow: 0 0 10px rgba(201, 165, 137, 0.3);
         }
 
-        /* Photo Feature Section */
         .photo-feature {
             min-height: 100vh;
             display: flex;
@@ -747,7 +734,6 @@
             align-items: center;
         }
 
-        /* Gallery Grid */
         .gallery-section {
             padding: 120px 20px;
             background: linear-gradient(180deg, var(--midnight) 0%, var(--charcoal) 100%);
@@ -857,7 +843,6 @@
             transform: scale(1.2) rotate(-2deg);
         }
 
-        /* Details Section */
         .details-section {
             padding: 120px 20px;
             background: var(--midnight);
@@ -988,7 +973,6 @@
             line-height: 1.7;
         }
 
-        /* RSVP Section */
         .rsvp-section {
             padding: 120px 20px;
             background: linear-gradient(180deg, var(--charcoal) 0%, var(--midnight) 100%);
@@ -1117,7 +1101,6 @@
             text-shadow: 0 0 10px rgba(201, 165, 137, 0.3);
         }
 
-        /* Confetti */
         .confetti-piece {
             position: fixed;
             width: 12px;
@@ -1140,7 +1123,6 @@
             }
         }
 
-        /* Responsive adjustments */
         @media (max-width: 968px) {
             .photo-feature-content {
                 grid-template-columns: 1fr;
@@ -1211,45 +1193,36 @@
     </style>
 </head>
 <body>
-    <!-- Background orbs -->
+
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
 
-    <!-- Sparkles - LAYERED ON TOP -->
     <div class="sparkle-container" id="sparkles"></div>
 
-    <!-- Hero Section - Champagne glasses background -->
     <section class="hero">
         <div class="hero-content">
             <div class="elegant-line"></div>
             
-            <!-- "Birthday" in script -->
             <div class="birthday-text" id="birthdayText">Birthday</div>
 
-            <!-- Language toggle ABOVE PARTY -->
             <button class="lang-toggle" id="langToggle" type="button">Espanol</button>
-            
-            <!-- "PARTY" in bold -->
+       
             <div class="party-text" id="partyText">
                 <span>P</span><span>A</span><span>R</span><span>T</span><span>Y</span>
             </div>
             
-            <!-- Tagline -->
             <div class="tagline" id="tagline1">You're Invited!</div>
             <div class="tagline" id="tagline2">Come join us in celebrating</div>
             
-            <!-- Name in cursive -->
             <div class="name-container">
                 <h1 class="name">Patricia's</h1>
             </div>
             
-            <!-- "50th" - BIGGER -->
             <div class="milestone-wrapper">
                 <div class="milestone">50<span class="milestone-suffix">th</span></div>
             </div>
 
-            <!-- Scroll note -->
             <div class="scroll-note" id="scrollNote">↓ Scroll to RSVP ↓</div>
         </div>
         <div class="scroll-hint">
@@ -1258,7 +1231,6 @@
         </div>
     </section>
 
-    <!-- Countdown Section - String lights background -->
     <section class="countdown-section">
         <div class="countdown-content">
             <h2 class="section-header" id="countdownHeader">The Celebration Begins In</h2>
@@ -1288,7 +1260,6 @@
         </div>
     </section>
 
-    <!-- Photo Feature Section -->
     <section class="photo-feature">
         <div class="photo-feature-content">
             <div class="feature-image-wrapper">
@@ -1387,8 +1358,7 @@
             <div class="scroll-line"></div>
         </div>
     </section>
-
-    <!-- RSVP Section -->
+<!--rsvp section here-->
     <section class="rsvp-section">
         <div class="rsvp-content">
             <h2 class="rsvp-header" id="rsvpHeader">Join the Celebration</h2>
@@ -1397,7 +1367,7 @@
                 Please let us know if you can join us for an elegant evening<br>
                 of dinner, drinks, dancing, and celebration.
             </p>
-            <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="rsvp-button" id="rsvpButton">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSedu6fE8IbeW64O80fKRbtlGgOhscbKLZQnqFnC_28ksMPjkQ/viewform?usp=publish-editor" target="_blank" class="rsvp-button" id="rsvpButton">
                 <span id="rsvpButtonText">RSVP Now</span>
             </a>
             <p class="rsvp-deadline" id="rsvpDeadline">Please respond by March 1st, 2026</p>
@@ -1408,9 +1378,6 @@
     </section>
 
     <script>
-        // -------------------------------
-        // i18n (EN <-> ES) + UI updates
-        // -------------------------------
         const I18N = {
             en: {
                 birthday: "Birthday",
@@ -1484,7 +1451,6 @@
             localStorage.setItem("lang", lang);
         }
 
-        // Rebuild PARTY text as spans to keep letter animation
         function setPartyLetters(word) {
             const party = document.getElementById("partyText");
             if (!party) return;
@@ -1496,14 +1462,12 @@
                 party.appendChild(span);
             });
 
-            // re-apply the PARTY letter drop animation delays
             const partyLetters = document.querySelectorAll(".party-text span");
             partyLetters.forEach((letter, i) => {
                 letter.style.animationDelay = `${1.5 + i * 0.15}s`;
             });
         }
 
-        // Rebuild Birthday text as spans to keep letter reveal
         function animateBirthday(text) {
             const birthdayText = document.getElementById("birthdayText");
             if (!birthdayText) return;
@@ -1517,7 +1481,6 @@
             });
         }
 
-        // Wave animation for countdown header
         function animateHeaderText(el, text) {
             if (!el) return;
 
@@ -1530,7 +1493,6 @@
             });
         }
 
-        // Safe setters
         function setText(id, value) {
             const el = document.getElementById(id);
             if (el) el.textContent = value;
@@ -1543,33 +1505,27 @@
         function applyLanguage(lang) {
             const t = I18N[lang] || I18N.en;
 
-            // Hero
             animateBirthday(t.birthday);
             setPartyLetters(t.party);
             setText("tagline1", t.tagline1);
             setText("tagline2", t.tagline2);
             setText("scrollNote", t.scrollNote);
 
-            // Countdown header uses wave spans
             const countdownHeaderEl = document.getElementById("countdownHeader");
             animateHeaderText(countdownHeaderEl, t.countdownHeader);
 
-            // Countdown subtext + labels
             setText("countdownSubtext", t.countdownSubtext);
             setText("labelDays", t.days);
             setText("labelHours", t.hours);
             setText("labelMinutes", t.minutes);
             setText("labelSeconds", t.seconds);
 
-            // Photo feature
             setText("featureTitle", t.featureTitle);
             setText("featureP1", t.featureP1);
             setText("featureP2", t.featureP2);
 
-            // Gallery
             setText("galleryHeader", t.galleryHeader);
 
-            // Details
             setText("detailsHeader", t.detailsHeader);
             setText("detailDateLabel", t.detailDateLabel);
             setText("detailDateSub", t.detailDateSub);
@@ -1577,32 +1533,24 @@
             setText("detailTimeSub", t.detailTimeSub);
             setText("detailVenueLabel", t.detailVenueLabel);
 
-            // RSVP
             setText("rsvpHeader", t.rsvpHeader);
             setHTML("rsvpMessage", t.rsvpMessage);
             setText("rsvpButtonText", t.rsvpNow);
             setText("rsvpDeadline", t.rsvpDeadline);
             setText("contactInfo", t.contactInfo);
 
-            // "Explore" labels (uses data-i18n="explore")
             document.querySelectorAll('[data-i18n="explore"]').forEach((el) => {
                 el.textContent = t.explore;
             });
 
-            // Toggle button text
             setText("langToggle", t.langBtn);
 
             setStoredLang(lang);
         }
 
-        // ---------------------------------
-        // Existing behaviors (kept)
-        // ---------------------------------
         document.addEventListener('DOMContentLoaded', () => {
-            // Apply saved language on load
             applyLanguage(getStoredLang());
 
-            // Toggle language button
             const toggleBtn = document.getElementById("langToggle");
             if (toggleBtn) {
                 toggleBtn.addEventListener("click", () => {
@@ -1612,7 +1560,6 @@
                 });
             }
 
-            // Countdown Timer
             const countdownDate = new Date('March 21, 2026 19:00:00').getTime();
 
             function updateCountdown() {
@@ -1645,7 +1592,6 @@
             updateCountdown();
             setInterval(updateCountdown, 1000);
 
-            // Sparkle creation - LAYERED ON TOP
             const container = document.getElementById('sparkles');
             const sparkleCount = 50;
 
@@ -1661,7 +1607,6 @@
                 }
             }
 
-            // Scroll animations
             const observerOptions = {
                 threshold: 0.15,
                 rootMargin: '0px 0px -100px 0px'
@@ -1672,7 +1617,6 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
 
-                        // Stagger gallery items
                         if (entry.target.classList.contains('gallery-content')) {
                             const items = entry.target.querySelectorAll('.gallery-item');
                             items.forEach((item, index) => {
@@ -1680,7 +1624,6 @@
                             });
                         }
 
-                        // Stagger detail cards
                         if (entry.target.classList.contains('details-content')) {
                             const cards = entry.target.querySelectorAll('.detail-card');
                             cards.forEach((card, index) => {
@@ -1691,14 +1634,12 @@
                 });
             }, observerOptions);
 
-            // Observe all animated sections
             const sections = document.querySelectorAll(
                 '.countdown-content, .photo-feature-content, .gallery-content, .details-content, .rsvp-content'
             );
             sections.forEach(section => observer.observe(section));
         });
 
-        // Confetti on RSVP button click
         const rsvpBtn = document.querySelector('.rsvp-button');
         if (rsvpBtn) {
             rsvpBtn.addEventListener('click', function(e) {
